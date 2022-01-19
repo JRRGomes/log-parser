@@ -1,2 +1,2 @@
-require_relative 'parse.rb'
-Parse.new('game.log').print_first_line
+require_relative './lib/parser.rb'
+Parser.new('games.log').print_first_line
