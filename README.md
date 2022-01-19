@@ -1,6 +1,6 @@
 ## To install RVM and RUBY on Linux
 
-## 1. Add the ppa ans install RVM:
+## 1. Add the ppa and install RVM:
 
 ```term
 sudo apt-add-repository -y ppa:rael-gc/rvm
