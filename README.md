@@ -1,4 +1,4 @@
-# To install RVM and RUBY on Linux
+## To install RVM and RUBY on Linux
 
 ## 1. Add the ppa ans install RVM:
 
@@ -30,12 +30,12 @@ rvm user gemsets
 rvm install ruby-3.1.0
 ```
 
-# To run the app
+## To run the app
 
 ```term
 ruby main.rb
 ```
-# To install and run Rspec tests
+## To install and run rspec tests
 
 ```term
 gem install rspec
