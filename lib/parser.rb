@@ -1,3 +1,5 @@
+require 'json'
+
 class Parser
   def initialize(file)
     @file = file
@@ -12,7 +14,6 @@ class Parser
   end
 
   def print_info
-    require 'json'
     file = File.foreach(@file)
     file_lines = file.count
     json_lines = {@file => {'lines' => file_lines}}.to_json
