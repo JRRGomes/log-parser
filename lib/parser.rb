@@ -16,7 +16,6 @@ class Parser
   def print_info
     file = File.foreach(@file)
     file_lines = file.count
-    json_lines = {@file => {'lines' => file_lines}}.to_json
-    JSON.pretty_generate(JSON.parse(json_lines)) 
+    JSON.pretty_generate({@file => {lines: file_lines}}) 
   end
 end
