@@ -38,7 +38,18 @@ ruby main.rb
 ## To install and run rspec tests
 
 ```term
-gem install rspec
+gem install bundler
+```
+Specify your dependencies in a Gemfile in your project`s root.
+
+```term
+source 'https://rubygems.org'
+gem 'rspec', :require => 'spec'
+```
+Install rspec
+
+```term
+bundle install
 rspec
 ```
 	
