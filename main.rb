@@ -1,3 +1,3 @@
 require_relative './lib/parser.rb'
 
-p Parser.new('games.log').print_first_line
+puts Parser.new('./spec/fixtures/games_test.log').print_info
