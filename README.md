@@ -56,4 +56,7 @@ rspec
 ## References
 
 1. https://github.com/rvm/ubuntu_rvm/blob/master/README.md
+
 2. https://www.theodinproject.com/paths/full-stack-ruby-on-rails/courses/ruby-programming/lessons/introduction-to-rspec
+
+3. https://bundler.io/v1.3/

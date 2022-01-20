@@ -8,6 +8,6 @@ class Parser
 		file = File.open(@file)
 		first_line = file.readline
 		file.close
-		p first_line
+		first_line
 	end
 end
