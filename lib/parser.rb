@@ -1,3 +1,5 @@
+require 'json'
+
 class Parser
   def initialize(file)
     @file = file
@@ -9,5 +11,11 @@ class Parser
     first_line = file.readline
     file.close
     first_line
- end
+  end
+
+  def print_info
+    file = File.foreach(@file)
+    file_lines = file.count
+    JSON.pretty_generate({@file => {lines: file_lines}}) 
+  end
 end
