@@ -1,2 +1,2 @@
 games.log
-echo coverage >> .gitignore
+coverage
