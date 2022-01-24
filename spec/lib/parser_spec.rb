@@ -1,4 +1,4 @@
-require './lib/parser.rb'
+require './lib/parser'
 
 describe Parser do
   describe "#print_first_line" do
@@ -8,7 +8,7 @@ describe Parser do
     end
 
     it "checks if the file exists" do
-      expect{Parser.new('game.log')}.to raise_error(RuntimeError, "File doesn't exist")
+      expect{ Parser.new('game.log') }.to raise_error(RuntimeError, "File doesn't exist")
     end
 
     it "prints a json with the file location and how many lines on it" do
