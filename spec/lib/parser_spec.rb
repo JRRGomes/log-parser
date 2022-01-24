@@ -13,7 +13,7 @@ describe Parser do
 
     it "prints a json with the file location and how many lines on it" do
       file = Parser.new('./spec/fixtures/games_test.log')
-      expect(file.print_info).to eql("{\n  \"./spec/fixtures/games_test.log\": {\n    \"lines\": 10\n  }\n}")
+      expect(file.print_info).to eql("{\n  \"./spec/fixtures/games_test.log\": {\n    \"lines\": 50,\n    \"players\": [\n      \"Isgalamido\",\n      \"Dono da Bola\",\n      \"Mocinha\"\n    ]\n  }\n}")
     end
   end
 end
