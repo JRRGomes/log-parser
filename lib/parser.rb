@@ -1,21 +1,31 @@
 require 'json'
 
 class Parser
-  def initialize(file)
-    @file = file
-    raise "File doesn't exist" unless File.exists?(@file)
+  def initialize(filename)
+    @filename = filename
+    raise "File doesn't exist" unless File.exist?(@filename)
   end
 
   def print_first_line
-    file = File.open(@file)
-    first_line = file.readline
-    file.close
+    filename = File.open(@filename)
+    first_line = filename.readline
+    filename.close
     first_line
   end
 
   def print_info
-    file = File.foreach(@file)
-    file_lines = file.count
-    JSON.pretty_generate({@file => {lines: file_lines}}) 
+    filename = File.foreach(@filename)
+    file_lines = filename.count
+
+    players_arr = []
+
+    data = File.open(@filename, &:readlines)
+    client_lines = data.grep(/.......ClientUserinfoChanged/)
+
+    client_lines.each do |line|
+      players_lines = line.split('n\\')[1]
+      players_arr << players_lines.split('\\').first
+    end
+    JSON.pretty_generate({ @filename => { lines: file_lines, players: players_arr.uniq } })
   end
 end
