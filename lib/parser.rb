@@ -22,6 +22,6 @@ class Parser
       players_lines = line.split('n\\')[1]
       players_arr << players_lines.split('\\').first
     end
-    JSON.pretty_generate({ @file_path => { lines: line_count, players: players_arr.uniq } })
+    { @file_path => { lines: line_count, players: players_arr.uniq } }
   end
 end

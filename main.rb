@@ -1,3 +1,3 @@
 require_relative './lib/parser'
 
-puts Parser.new('./spec/fixtures/games_test.log').print_info
+puts JSON.pretty_generate(Parser.new('./spec/fixtures/games_test.log').print_info)
